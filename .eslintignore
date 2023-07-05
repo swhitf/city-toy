@@ -1,0 +1,5 @@
+# any files in root 
+/**/*.js
+/**/*.mjs
+/test/*.ts
+/test/*.tsx

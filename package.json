@@ -1,0 +1,53 @@
+{
+    "name": "web-app",
+    "version": "2.55.3",
+    "private": true,
+    "scripts": {
+        "start": "node ./scripts/start.mjs",
+        "build": "node ./scripts/build.mjs",
+        "set-env": "node ./scripts/set-env.mjs",
+        "npkg": "node ./scripts/npkg.mjs",
+        "bundle:fonts": "node ./scripts/bundle-fonts.mjs",
+        "bundle:icons": "node ./scripts/bundle-icons.mjs",
+        "bundle": "yarn bundle:fonts && yarn bundle:icons",
+        "lint": " yarn eslint --fix --ext ts,tsx ./src",
+        "test": "yarn jest",
+        "eject": "react-scripts eject"
+    },
+    "husky": {
+        "hooks": {
+            "pre-push": "yarn lint"
+        }
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "dependencies": {
+        "@types/react": "^18.2.13",
+        "@types/react-dom": "^18.2.6",
+        "@types/shortid": "^0.0.29",
+        "esbuild": "0.14.3",
+        "kld-intersections": "^0.7.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "shortid": "^2.2.16",
+        "styled-components": "^6.0.0-rc.5"
+    },
+    "devDependencies": {
+        "lite-server": "^2.6.1",
+        "rimraf": "^5.0.1",
+        "typescript": "^5.1.3"
+    }
+}

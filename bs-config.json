@@ -1,0 +1,12 @@
+{
+    "ghostMode": false,
+    "open": false,
+    "port": 3000,
+    "cors": true,
+    "files": [
+        "./build/**/*.*"
+    ],
+    "server": {
+        "baseDir": "./build"
+    }
+}
